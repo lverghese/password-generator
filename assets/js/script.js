@@ -40,14 +40,10 @@ function generatePassword(passwordLength, passwordLower, passwordUpper, password
     return password;
 
   } else {
+      //indicates error, no conditions selected
       return 0;
   }
   
-  
-
-
-
-
 
 }
 
