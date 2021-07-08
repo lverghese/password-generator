@@ -10,7 +10,13 @@ function writePassword() {
     return 0;
   } 
 
+  var passwordLower = window.confirm("Do you want lowercase letters?");
+ 
+ var passwordUpper = window.confirm("Do you want uppercase letters?");
 
+ var passwordNumbers = window.confirm("Do you want numbers?");
+
+ var passwordSpecial = window.confirm("Do you want special characters?");
 
 
   var password = generatePassword();
