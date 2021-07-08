@@ -8,8 +8,37 @@ function generatePassword(passwordLength, passwordLower, passwordUpper, password
 
     var password = "";
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const alphabetUpper = alphabet.toUpperCase();
   const special = "!@#$%^&*_-";
   const numbers = "0123456789";
+  var totalLibrary = "";
+  var libArray = [];
+
+  if (passwordLower) {
+      totalLibrary = totalLibrary + alphabet;
+  }
+
+  if (passwordUpper) {
+        totalLibrary = totalLibrary + alphabetUpper;
+  }
+
+  if (passwordNumbers) {
+      totalLibrary = totalLibrary + numbers;
+  }
+
+  if (passwordSpecial) {
+      totalLibrary = totalLibrary + special;
+  }
+  libArray = totalLibrary.split
+
+  console.log(totalLibrary);
+  
+
+
+
+  //for (var i = 0; i < passwordLength; i++) {
+
+
 
 }
 
