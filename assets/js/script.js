@@ -1,8 +1,21 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+//generate password
+
+function generatePassword(passwordLength, passwordLower, passwordUpper, passwordNumbers, passwordSpecial) {
+
+    var password = "";
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const special = "!@#$%^&*_-";
+  const numbers = "0123456789";
+
+}
+
+
 // Write password to the #password input
-function writePassword(passwordLength, passwordLower, passwordUpper, passwordNumbers, passwordSpecial) {
+function writePassword() {
     
     var passwordLength = window.prompt("How long do you want your password? (8-128) characters");
   if (passwordLength < 8 || passwordLength > 128) {
