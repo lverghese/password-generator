@@ -12,7 +12,6 @@ function generatePassword(passwordLength, passwordLower, passwordUpper, password
   const special = "!@#$%^&*_-";
   const numbers = "0123456789";
   var totalLibrary = "";
-  var libArray = [];
 
   if (passwordLower) {
       totalLibrary = totalLibrary + alphabet;
@@ -29,14 +28,23 @@ function generatePassword(passwordLength, passwordLower, passwordUpper, password
   if (passwordSpecial) {
       totalLibrary = totalLibrary + special;
   }
-  libArray = totalLibrary.split
 
-  console.log(totalLibrary);
+  if (totalLibrary.length > 0) {
+    for (var i = 0; i < passwordLength; i++) {
+        console.log(i);
+      password += totalLibrary[Math.floor(Math.random() * totalLibrary.length)];
+  
+    };
+    
+    return password;
+
+  } else {
+      return 0;
+  }
+  
   
 
 
-
-  //for (var i = 0; i < passwordLength; i++) {
 
 
 
@@ -60,10 +68,17 @@ function writePassword() {
 
  var passwordSpecial = window.confirm("Do you want special characters?");
 
+ var password = generatePassword(passwordLength, passwordLower, passwordUpper, passwordNumbers, passwordSpecial);
 
-  var password = generatePassword(passwordLength, passwordLower, passwordUpper, passwordNumbers, passwordSpecial);
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
+
+  if (password == 0) {
+      alert("You need to select at least one of the conditions to generate a password");
+  } else {
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+  }
+ 
+
 
 }
 
