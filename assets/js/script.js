@@ -13,6 +13,7 @@ function generatePassword(passwordLength, passwordLower, passwordUpper, password
   const numbers = "0123456789";
   var totalLibrary = "";
 
+  //adding conditions chosen to total library
   if (passwordLower) {
       totalLibrary = totalLibrary + alphabet;
   }
@@ -35,7 +36,7 @@ function generatePassword(passwordLength, passwordLower, passwordUpper, password
       password += totalLibrary[Math.floor(Math.random() * totalLibrary.length)];
   
     };
-    
+    //send info to password variable
     return password;
 
   } else {
@@ -70,7 +71,7 @@ function writePassword() {
 
  var password = generatePassword(passwordLength, passwordLower, passwordUpper, passwordNumbers, passwordSpecial);
 
-
+//if statement if no conditions are selected for the password
   if (password == 0) {
       alert("You need to select at least one of the conditions to generate a password");
   } else {
